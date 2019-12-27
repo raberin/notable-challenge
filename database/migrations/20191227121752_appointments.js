@@ -15,7 +15,7 @@ exports.up = function(knex, Promise) {
     tbl.string("lname").notNullable();
 
     tbl.string("date").notNullable();
-    tbl.string("time").notNullable();
+    tbl.time("time").notNullable();
   });
 };
 

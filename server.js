@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const usersRouter = require("./routes/users-router.js");
+const doctorsRouter = require("./routes/doctors-router.js");
 
 // Middleware
 server.use(cors());
@@ -13,6 +14,7 @@ server.use(express.json());
 
 // Routers
 server.use("/api/users", usersRouter);
+server.use("/api/doctors", doctorsRouter);
 
 //Routes
 server.get("/", (req, res) => {
